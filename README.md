@@ -28,13 +28,11 @@ Product-Prices-JavaScript-Generator-for-OpenCart/
                 
             └── productprices.php
 
-            └──screenshot/
 
     └── OpenCart4/
 
         └── productprices.php
-
-        └──screenshot/
+        
 
     └── README.md
 
