@@ -50,7 +50,6 @@
 
 Для вопросов и обсуждений используйте:
 - [Issues](https://github.com/Vitaly-72/Product-Prices-JavaScript-Generator-for-OpenCart/issues) - для багов и предложений
-- [Discussions](https://github.com/Vitaly-72/Product-Prices-JavaScript-Generator-for-OpenCart/discussions) - для общих вопросов
 
 ---
 
