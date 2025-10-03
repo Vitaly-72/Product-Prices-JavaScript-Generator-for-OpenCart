@@ -49,18 +49,25 @@ catalog/controller/common/productprices.php
 <script src="index.php?route=common/productprices"></script>
 
 ### 3. Настройка productprices.php
-- для OpenCart3 найти строку "$product_ids = array(587, 528);" и указать ID всех товаров которые необходимо добавить в js объект. 
+- для OpenCart3 найти строку "$product_ids = array(587, 528);" и указать ID всех товаров которые необходимо добавить в js объект.
+- 
 $product_ids = array(587, 528); // перечесляем ID, узнать id можно через БД (sql запрос выложен)
 
-- для OpenCart4 найти строку "$product_ids = [28, 29];" и указать ID всех товаров которые необходимо добавить в js объект. 
+- для OpenCart4 найти строку "$product_ids = [28, 29];" и указать ID всех товаров которые необходимо добавить в js объект.
+-  
 $product_ids = [28, 29]; // перечесляем ID, узнать id можно через БД (sql запрос выложен)
 
 ### 4. Как обращаться к объекту
 [587] - это ID товара
+
 productPrices[587].name      // Название товара
+
 productPrices[587].price     // Отформатированная цена (с валютой)
+
 productPrices[587].price_raw // Числовая цена для расчетов
+
 productPrices[587].model     // Модель товара
+
 
 ### 5.После всех добавлений очистить кеш, кеш модификаторов
 Модуль создает JavaScript код вида:
