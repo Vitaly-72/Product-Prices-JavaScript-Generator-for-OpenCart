@@ -21,14 +21,22 @@
 
 ## 📁 Структура проекта
 Product-Prices-JavaScript-Generator-for-OpenCart/
-└──controller/
-│      └── OpenCart3/
-│              └── productprices.php
-│               └──screenshot/
-│      └── OpenCart4/
-│              └── productprices.php
-│              └──screenshot/
-└── README.md
+
+    └──controller/
+        
+        └── OpenCart3/
+                
+            └── productprices.php
+
+            └──screenshot/
+
+    └── OpenCart4/
+
+        └── productprices.php
+
+        └──screenshot/
+
+    └── README.md
 
 ## 🛠 Установка
 
