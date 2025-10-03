@@ -1,0 +1,1 @@
+SELECT cms_product_description.name название_товара, cms_product.price цена_без_скидки, cms_product_special.price цена_со_скидкой, cms_product.product_id ID FROM cms_product JOIN cms_product_description ON cms_product.product_id = cms_product_description.product_id JOIN cms_product_special ON cms_product.product_id = cms_product_special.product_id WHERE cms_product.price > 0;
