@@ -9,11 +9,31 @@ class ControllerCommonProductPrices extends Controller {
         foreach ($product_ids as $product_id) {
             $product_info = $this->model_catalog_product->getProduct($product_id);
             if ($product_info) {
+                // Получаем информацию о скидках
+                $discount_price = $this->model_catalog_product->getProductDiscounts($product_id);
+                
+                // Определяем цену по акции
+                $special_price = "0р.";
+                $special_price_raw = "0";
+                
+                // Проверяем есть ли специальная цена
+                if ((float)$product_info['special']) {
+                    $special_price = $this->currency->format($product_info['special'], $this->session->data['currency']);
+                    $special_price_raw = $product_info['special'];
+                } 
+                // Или проверяем скидки
+                elseif ($discount_price) {
+                    $special_price = $this->currency->format($discount_price[0]['price'], $this->session->data['currency']);
+                    $special_price_raw = $discount_price[0]['price'];
+                }
+                
                 $products_data[$product_id] = array(
                     'name'  => $product_info['name'],
                     'price' => $this->currency->format($product_info['price'], $this->session->data['currency']),
                     'model' => $product_info['model'],
-                    'price_raw' => $product_info['price']
+                    'price_raw' => $product_info['price'],
+                    'special_price' => $special_price,
+                    'special_price_raw' => $special_price_raw
                 );
             }
         }
