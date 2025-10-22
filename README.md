@@ -74,8 +74,23 @@ var productPrices = {
     "587": {
         "name": "Название товара",
         "price": "1 250 ₽",
+        "special_price": "530р.", 
         "model": "MODEL123",
-        "price_raw": 1250
+        "price_raw": 1250,
+         "special_price_raw": "530.0000"
+    }
+};
+```
+Если акции у товара нет:
+```
+var productPrices = {
+    "587": {
+        "name": "Название товара",
+        "price": "1 250 ₽",
+        "special_price": "0р.", 
+        "model": "MODEL123",
+        "price_raw": 1250,
+         "special_price_raw": "0"
     }
 };
 ```
