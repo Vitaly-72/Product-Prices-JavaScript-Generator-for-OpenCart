@@ -62,6 +62,10 @@ productPrices[587].name      // Название товара
 
 productPrices[587].price     // Отформатированная цена (с валютой)
 
+productPrices[587].special_price    // Отформатированная цена акционная (с валютой)
+
+productPrices[587].special_price_raw     // Числовая цена акционная для расчетов 
+
 productPrices[587].price_raw // Числовая цена для расчетов
 
 productPrices[587].model     // Модель товара
